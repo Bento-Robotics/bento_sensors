@@ -23,6 +23,12 @@ add_subdirectory(mlx90640)
 add_subdirectory(demo_sensor_py)
 
 
+# Install launch file
+install(FILES
+  bento_sensors.launch.yaml
+  DESTINATION share/${PROJECT_NAME}/
+)
+
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   # the following line skips the linter which checks for copyrights

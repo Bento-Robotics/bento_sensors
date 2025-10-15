@@ -1,0 +1,18 @@
+%YAML 1.2
+---
+launch:
+  - arg:
+      name: "bento_ns"
+      description: "set namespace for sensor nodes"
+      default: "bento"
+  - arg:
+      name: "do_demo_sensor"
+      description: "run example node for a python sensor"
+      default: "False"
+
+  - node:
+      pkg: "bento_sensors"
+      namespace: "$(var bento_ns)"
+      exec: "demo_sensor_node.py"
+      name: "demo_sensor_py"
+      if: "$(var do_demo_sensor)"
