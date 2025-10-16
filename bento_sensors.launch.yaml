@@ -9,6 +9,10 @@ launch:
       name: "do_demo_sensor"
       description: "run example node for a python sensor"
       default: "False"
+  - arg:
+      name: "do_ssd1306"
+      description: "run node for ssd1306 lcd"
+      default: "False"
 
   - node:
       pkg: "bento_sensors"
@@ -16,3 +20,9 @@ launch:
       exec: "demo_sensor_node.py"
       name: "demo_sensor_py"
       if: "$(var do_demo_sensor)"
+  - node:
+      pkg: "bento_sensors"
+      namespace: "$(var bento_ns)"
+      exec: "ssd1306_node.py"
+      name: "lcd_ssd1306"
+      if: "$(var do_ssd1306)"
