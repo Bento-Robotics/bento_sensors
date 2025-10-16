@@ -1,12 +1,13 @@
 find_package(ament_cmake_python REQUIRED)
 find_package(rclpy REQUIRED)
 
-
 # Install Python modules
 ament_python_install_package(demo_sensor_modules)
 
+#add_py_packages(${CMAKE_CURRENT_LIST_DIR}/requirements.txt)
+
 # Install Python executables
 install(PROGRAMS
-  scripts/demo_sensor_node.py
+  demo_sensor_node.py
   DESTINATION lib/${PROJECT_NAME}
 )
