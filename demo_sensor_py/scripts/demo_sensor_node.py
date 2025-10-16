@@ -6,7 +6,7 @@ from rclpy.node import Node
 
 from std_msgs.msg import String
 
-from modules.demo_sensor_lib import data
+from demo_sensor_modules.demo_sensor_lib import data
 
 
 class DemoSensor(Node):

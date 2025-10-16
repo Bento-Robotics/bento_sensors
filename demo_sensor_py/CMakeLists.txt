@@ -3,7 +3,7 @@ find_package(rclpy REQUIRED)
 
 
 # Install Python modules
-ament_python_install_package(modules)
+ament_python_install_package(demo_sensor_modules)
 
 # Install Python executables
 install(PROGRAMS
