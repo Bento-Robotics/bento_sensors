@@ -37,7 +37,7 @@ function(add_py_packages requirements_path)
   endif()
   # install dependencies from requirements.txt
   execute_process(
-    COMMAND /usr/bin/pip3 install --no-input -t ${INSTALL_DIR} -r ${requirements_path}
+    COMMAND /usr/bin/pip3 install --upgrade --no-input -t ${INSTALL_DIR} -r ${requirements_path}
     RESULT_VARIABLE pip_install_ret_code
   )
   # report error if return code is non-zero
