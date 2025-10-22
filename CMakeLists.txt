@@ -53,6 +53,7 @@ endfunction()
 add_subdirectory(mlx90640)
 add_subdirectory(demo_sensor_py)
 add_subdirectory(lcd_ssd1306)
+add_subdirectory(powa_ina219)
 
 # Install launch file
 install(FILES
