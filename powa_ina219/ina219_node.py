@@ -54,7 +54,7 @@ class ina219_Node(Node):
                         # cut all decimal digits, as they are mostly noise
         msg.current = - float(f'{(self.sensor.current/1000):.0f}')
         # Percentage 0~1 - 6s battery, each 3.0V ~ 4.2V
-        msg.percentage = float(f'{(msg.voltage - 3.0*6) / (4.2*6 - 3.0*6):.2f}')
+        msg.percentage = float(f'{(msg.voltage - 3.0*6) * 100 / (4.2*6 - 3.0*6):.0f}')
 
         if msg.voltage < 1.1 and msg.voltage > 0.7:
             self.get_logger().warn('This is around the measuring voltage if the INA219 has nothing connected. You may have a floating ground connection.')
