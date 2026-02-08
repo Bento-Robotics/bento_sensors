@@ -6,7 +6,7 @@ from rclpy.node import Node
 
 from sensor_msgs.msg import Imu
 from sensor_msgs.msg import MagneticField
-from sensor_msgs-msg import Temperature
+from sensor_msgs.msg import Temperature
 
 
 
