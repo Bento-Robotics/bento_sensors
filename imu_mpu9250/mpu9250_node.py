@@ -81,7 +81,7 @@ class mpu9250_Node(Node):
         msg_mag.magnetic_field_covariance[8] = msg_mag.magnetic_field.z * 0.06
         msg_temp.temperature.variance = msg_temp.temperature * 0.041
         self.publisher_imu.publish(msg_imu)
-        self.publisher_imu.publish(msg_temp)
+        self.publisher_temp.publish(msg_temp)
         self.publisher_mag.publish(msg_mag)
 
 
