@@ -36,3 +36,9 @@ launch:
       exec: "ina219_node.py"
       name: "powa_ina219"
       if: "$(var do_ina219)"
+  - node:
+      pkg: "bento_sensors"
+      namespace: "$(var bento_ns)"
+      exec: "mpu9250_node.py"
+      name: "imu_mpu9250"
+      if: "$(var do_mpu9250)"
